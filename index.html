@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Markdown Técnicas</title>
+    <!-- Highlight.js para resaltado de sintaxis -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- Marked.js para renderizado Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Panel lateral -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Mis Notas</h2>
+            </div>
+            <ul class="notes-list" id="notes-list">
+                <!-- Las notas se agregarán aquí dinámicamente -->
+            </ul>
+            <button class="add-note-btn" id="add-note-btn">+ Nueva Nota</button>
+        </div>
+
+        <!-- Área principal -->
+        <div class="main-content">
+            <div class="toolbar">
+                <h3 id="current-note-title">Nota sin título</h3>
+                <button class="theme-toggle" id="theme-toggle">🌓</button>
+            </div>
+
+            <div class="editor-preview-container">
+                <div class="editor-container">
+                    <textarea id="markdown-editor" placeholder="Escribe tu nota en Markdown aquí..."></textarea>
+                </div>
+                <div class="splitter" id="splitter"></div>
+                <div class="preview-container">
+                    <div id="markdown-preview"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
